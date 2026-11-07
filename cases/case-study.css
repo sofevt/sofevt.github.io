@@ -580,7 +580,7 @@ html {
   margin-top: 28px;
   min-height: 48px;
   padding: 0 22px;
-  border-radius: 999px;
+  border-radius: 12px;
   background: var(--dark);
   color: var(--white);
   font-size: 0.9375rem;
@@ -1051,7 +1051,7 @@ body:has(dialog[open]) {
   margin-top: 10px;
 }
 
-/* JTBD: короткие абзацы с ненавязчивыми акцентами */
+/* JTBD: короткие абзацы с акцентами */
 .case-content .jtbd {
   max-width: 640px;
   margin: 0 0 1.1em;
@@ -1348,5 +1348,405 @@ body:has(dialog[open]) {
   .row-item--media .case-figure {
     max-width: 240px;
     margin-top: 8px;
+  }
+}
+
+/* ==========================================================
+   Кейс как главная: слева колонка на весь экран, справа прокрутка
+   ========================================================== */
+html:has(body.case-page) {
+  background: #161616;
+}
+
+body.case-page {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #161616;
+  color: #fff;
+  --body: rgba(255, 255, 255, 0.82);
+  --muted-soft: rgba(255, 255, 255, 0.55);
+  --line: rgba(255, 255, 255, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.22);
+  --text: #ffffff;
+  --lavender-soft: rgba(192, 168, 228, 0.28);
+  --lavender-text: #c0a8e4;
+  --marker: #c0a8e4;
+}
+
+.case-split {
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) minmax(0, 3fr);
+  height: 100%;
+  min-height: 0;
+}
+
+.case-intro {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  padding: 60px clamp(32px, 4.6vw, 88px) clamp(40px, 8vh, 96px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.case-intro::-webkit-scrollbar {
+  display: none;
+}
+
+.case-intro .site-header {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.case-intro .nav a,
+.case-intro .nav a:focus-visible {
+  color: #fff;
+}
+
+.case-intro .nav a:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.7);
+}
+
+.case-intro .nav-portrait-link {
+  display: flex;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.case-intro .nav-portrait-link:hover,
+.case-intro .nav-portrait-link:focus-visible {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.case-intro .nav-portrait {
+  width: 36px;
+  height: 36px;
+  margin-block: -8px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 220ms ease;
+}
+
+.case-intro .nav-portrait-link:hover .nav-portrait,
+.case-intro .nav-portrait-link:focus-visible .nav-portrait {
+  transform: rotate(-8deg);
+}
+
+.case-intro .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.case-intro-body {
+  margin-top: clamp(40px, 8vh, 88px);
+}
+
+.case-intro h1 {
+  margin: 0;
+  font-family: "Covered By Your Grace", "Caveat", cursive;
+  font-size: clamp(2.5rem, 3.6vw, 3.75rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+.case-intro .case-lead {
+  margin: 16px 0 0;
+  max-width: 22em;
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.case-meta {
+  margin: 20px 0 0;
+  color: #c0a8e4;
+  font-size: 1.125rem;
+  line-height: 1.45;
+}
+
+.case-meta + .case-meta {
+  margin-top: 2px;
+}
+
+.case-intro .case-tags {
+  margin-top: 20px;
+}
+
+.case-intro .case-tags li,
+.case-intro .case-tags li:first-child {
+  border: 1px solid var(--tag-fill);
+  border-radius: 8px;
+  color: var(--tag-text);
+  background: transparent;
+  font-size: 0.9375rem;
+}
+
+.case-intro .case-tags li:first-child {
+  background: var(--tag-fill);
+  border-color: var(--tag-fill);
+}
+
+.case-intro .case-links {
+  margin: 20px 0 0;
+}
+
+.case-intro .case-links a,
+.case-intro .case-note {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.125rem;
+}
+
+.case-intro .case-note {
+  margin: 20px 0 0;
+}
+
+.case-toc {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.case-page .case-toc a {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: lowercase;
+  background-image: none;
+  transition: color 150ms ease;
+}
+
+.case-page .case-toc a:hover,
+.case-page .case-toc a.is-active {
+  color: #fff;
+}
+
+.case-page .case-toc a:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.7);
+}
+
+.case-page .case-toc li + li {
+  margin-top: 8px;
+}
+
+.case-scroll {
+  direction: rtl;
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.22);
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #161616;
+}
+
+.case-scroll::-webkit-scrollbar {
+  width: 14px;
+  background: #161616;
+}
+
+.case-scroll::-webkit-scrollbar-thumb {
+  border: 4px solid #161616;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.case-scroll-inner {
+  direction: ltr;
+  padding: 40px clamp(32px, 4.6vw, 88px) 80px;
+}
+
+.case-crumb {
+  margin: 0 0 20px;
+  font-family: "Covered By Your Grace", "Caveat", cursive;
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+.case-crumb a,
+.case-crumb span {
+  color: rgba(255, 255, 255, 0.42);
+  text-decoration: none;
+}
+
+.case-crumb a:hover {
+  color: #fff;
+}
+
+.case-crumb span {
+  margin: 0 0.2em;
+}
+
+.case-page .case-figure--hero {
+  margin: 0;
+}
+
+.case-page .case-video {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(160px, 0.65fr);
+  gap: clamp(20px, 3vw, 40px);
+  align-items: center;
+  max-width: none;
+  margin: 48px 0 0;
+  padding: 0;
+}
+
+.case-page .video-frame {
+  max-width: none;
+  margin: 0;
+}
+
+.case-page .video-caption {
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.case-page .case-content {
+  margin-top: 64px;
+}
+
+.case-page .case-wrap {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.case-page .band-grid {
+  display: block;
+}
+
+.case-page .band-grid > h2 {
+  margin-bottom: 20px;
+}
+
+.case-page .case-result,
+.case-page .case-conclusion {
+  margin: 0 0 72px;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.case-page .case-conclusion h2,
+.case-page .case-conclusion .band-grid > h2 {
+  margin-bottom: 32px;
+  color: #fff;
+}
+
+.case-page .row-label,
+.case-page .step-label,
+.case-page .data-table thead .is-soft {
+  background: #c0a8e4;
+  color: #1b1b19;
+}
+
+.case-page .case-back {
+  background: #262626;
+  color: #fff;
+}
+
+.case-page .case-back:hover {
+  background: #1b1b19;
+  color: #fff;
+}
+
+.case-page .to-top {
+  background: #fff;
+  color: #161616;
+}
+
+.case-page .to-top:hover {
+  background: #c0a8e4;
+}
+
+.case-page .site-footer {
+  display: none;
+}
+
+@media (min-width: 1025px) and (max-height: 700px) {
+  .case-intro-body {
+    margin-top: 24px;
+  }
+
+  .case-intro h1 {
+    font-size: clamp(2.25rem, 3.4vw, 3rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  body.case-page {
+    height: auto;
+    overflow: auto;
+  }
+
+  .case-split {
+    display: block;
+    height: auto;
+  }
+
+  .case-intro,
+  .case-scroll {
+    height: auto;
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .case-scroll {
+    direction: ltr;
+  }
+
+  .case-intro {
+    padding: 24px var(--pad-x) 40px;
+  }
+
+  .case-intro-body {
+    margin-top: 48px;
+  }
+
+  .case-intro h1 {
+    font-size: clamp(2rem, 4.5vw, 2.5rem);
+  }
+
+  .case-intro .case-lead {
+    font-size: 1rem;
+  }
+
+  .case-toc {
+    display: none;
+  }
+
+  .case-page .site-footer {
+    display: block;
+  }
+
+  .case-scroll-inner {
+    padding: 20px var(--pad-x) 64px;
+  }
+
+  .case-page .case-video {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .case-intro .nav-brand {
+    gap: 16px;
   }
 }

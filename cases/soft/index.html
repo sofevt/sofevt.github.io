@@ -25,71 +25,65 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Covered+By+Your+Grace&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="../case-study.css" />
   </head>
   <body class="case-page">
-    <div class="page-shell" id="top">
-      <header class="site-header">
-        <nav class="nav nav-left" aria-label="Основная навигация">
-          <a href="../../">главная</a>
-          <a href="../../cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+    <div class="case-split" id="top">
+      <aside class="case-intro">
+        <header class="site-header">
+          <nav class="nav nav-left" aria-label="Основная навигация">
+            <span class="nav-brand">
+              <a class="nav-portrait-link" href="../../" aria-label="На главную">
+                <img class="nav-portrait" src="../../images/portrait.png" width="40" height="40" alt="" />
+              </a>
+              <a href="../../cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+            </span>
+          </nav>
+
+          <nav class="nav nav-right" aria-label="Контакты">
+            <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+            <a href="mailto:sofaevt@gmail.com">gmail</a>
+          </nav>
+        </header>
+
+        <div class="case-intro-body">
+          <h1>Soft</h1>
+          <p class="case-lead">— пространство для развития и обмена опытом</p>
+          <p class="case-meta">Роль: UX/UI-дизайнер</p>
+          <p class="case-meta">Год: 2024–2025</p>
+          <ul class="case-tags" aria-label="Теги проекта">
+            <li>Пет-проект</li>
+            <li>EdTech</li>
+            <li>UX/UI</li>
+            <li>Mobile</li>
+          </ul>
+        </div>
+
+        <nav class="case-toc" aria-label="Разделы кейса">
+          <ol>
+            <li><a href="#about">О проекте</a></li>
+            <li><a href="#research">Исследование</a></li>
+            <li><a href="#design">Проектирование</a></li>
+            <li><a href="#ui">UI дизайн</a></li>
+            <li><a href="#metrics">Метрики</a></li>
+            <li><a href="#conclusion">Заключение</a></li>
+          </ol>
         </nav>
+      </aside>
 
-        <nav class="nav nav-right" aria-label="Контакты">
-          <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
-          <a href="mailto:sofaevt@gmail.com">gmail</a>
-        </nav>
-      </header>
+      <div class="case-scroll">
+        <div class="case-scroll-inner">
+          <p class="case-crumb">
+            <a href="../../#projects">PORTFOLIO</a>
+            <span aria-hidden="true">/</span>
+            soft
+          </p>
 
-      <main>
-        <!-- ============ Шапка кейса ============ -->
-        <section class="case-hero" aria-label="О проекте">
-          <div class="case-wrap case-hero-grid">
-            <div class="case-hero-title">
-              <h1>Soft</h1>
-              <p class="case-lead">
-                — пространство для развития и обмена опытом
-              </p>
-            </div>
-
-            <dl class="case-props">
-              <div>
-                <dt>Тип</dt>
-                <dd>
-                  <ul class="case-tags" aria-label="Теги проекта">
-                    <li>Пет-проект</li>
-                    <li>EdTech</li>
-                    <li>UX/UI</li>
-                    <li>Mobile</li>
-                  </ul>
-                </dd>
-              </div>
-              <div>
-                <dt>Роль</dt>
-                <dd>UX/UI-дизайнер</dd>
-              </div>
-              <div>
-                <dt>Год</dt>
-                <dd>2024–2025</dd>
-              </div>
-    
-              <div>
-                <dt>Figma</dt>
-                <dd class="case-links">
-                  <a
-                    href="https://www.figma.com/design/XWpkaaIrWijxhCsnKqmpb2/Soft"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Открыть макеты</a
-                  >
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </section>
-
-        <div class="case-wrap">
           <figure class="case-figure case-figure--hero">
             <img
               src="images/01-hero.webp"
@@ -98,43 +92,6 @@
               alt="Три экрана приложения Soft: главная лента, профиль автора, плеер подкаста"
             />
           </figure>
-        </div>
-
-        <!-- ============ Текст кейса: слева содержание, справа контент ============ -->
-        <div class="case-wrap case-layout">
-          <aside class="case-rail" aria-label="Содержание">
-            <nav class="case-toc" aria-label="Разделы кейса">
-              <p class="toc-title">Содержание</p>
-              <ol>
-                <li><a href="#about">О проекте</a></li>
-                <li>
-                  <a href="#research">Исследование</a>
-                  <ol>
-                    <li><a href="#market">Наблюдения</a></li>
-                    <li><a href="#interviews">Интервью</a></li>
-                    <li><a href="#insights">Инсайты</a></li>
-                  </ol>
-                </li>
-                <li>
-                  <a href="#design">Проектирование</a>
-                  <ol>
-                    <li><a href="#topics">Структура тем</a></li>
-                    <li><a href="#scenarios">Сценарии</a></li>
-                    <li><a href="#decisions">Дизайн-решения</a></li>
-                  </ol>
-                </li>
-                <li>
-                  <a href="#ui">UI дизайн</a>
-                  <ol>
-                    <li><a href="#style">Визуальный стиль</a></li>
-                    <li><a href="#uikit">UI kit</a></li>
-                  </ol>
-                </li>
-                <li><a href="#metrics">Метрики</a></li>
-                <li><a href="#conclusion">Заключение</a></li>
-              </ol>
-            </nav>
-          </aside>
 
           <div class="case-content">
             <!-- О проекте -->
@@ -496,13 +453,6 @@ Soft — концепция мобильного приложения для р�
                   alt="UI kit: кнопки, ссылки, переключатели, поля ввода и компоненты"
                 />
               </figure>
-              <a
-                class="case-link-btn"
-                href="https://www.figma.com/design/XWpkaaIrWijxhCsnKqmpb2/Soft"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Полный UI kit в Figma</a
-              >
             </section>
 
             <section class="case-section case-section--sub" id="metrics">
@@ -528,7 +478,6 @@ Soft — концепция мобильного приложения для р�
               </div>
             </section>
           </div>
-        </div>
 
         <!-- ============ Заключение ============ -->
         <section class="case-conclusion" id="conclusion">
@@ -547,32 +496,19 @@ Soft — концепция мобильного приложения для р�
             </div>
           </div>
         </section>
-      </main>
-
-      <footer class="site-footer" aria-label="Контакты и футер">
-        <div class="footer-content">
-          <img
-            class="footer-doodle"
-            src="../../images/envelope.svg"
-            alt=""
-            aria-hidden="true"
-          />
-          <h2>буду рада познакомиться!</h2>
-
-          <div class="footer-row">
-            <div class="footer-links footer-left">
-              <a href="../../">главная</a>
-              <a href="../../cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
-            </div>
-
-            <div class="footer-links footer-right">
-              <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
-              <a href="mailto:sofaevt@gmail.com">gmail</a>
-            </div>
-          </div>
         </div>
-      </footer>
+      </div>
     </div>
+
+      <footer class="site-footer">
+        <nav class="contact-row" aria-label="Контакты">
+          <a href="../../cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+          <span>
+            <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+            <a href="mailto:sofaevt@gmail.com">gmail</a>
+          </span>
+        </nav>
+      </footer>
 
     <!-- Кнопка «наверх» -->
     <button class="to-top" id="to-top" type="button" aria-label="Наверх">
@@ -617,29 +553,65 @@ Soft — концепция мобильного приложения для р�
 
         /* --- Содержание: подсветка текущего раздела --- */
         var links = Array.prototype.slice.call(
-          document.querySelectorAll('.case-toc a[href^="#"]')
+          document.querySelectorAll('.case-toc > ol > li > a[href^="#"]')
         );
         var targets = links.map(function (a) {
           return document.getElementById(a.getAttribute("href").slice(1));
         });
+        var scroller = document.querySelector(".case-scroll");
+
+        function scrollRoot() {
+          if (!scroller) return document.scrollingElement;
+          var style = getComputedStyle(scroller);
+          if (style.overflowY === "auto" || style.overflowY === "scroll") return scroller;
+          return document.scrollingElement;
+        }
+
         function updateToc() {
-          var line = window.innerHeight * 0.3;
+          var root = scrollRoot();
+          var rootTop = root === document.scrollingElement ? 0 : root.getBoundingClientRect().top;
+          var height = root === document.scrollingElement ? window.innerHeight : root.clientHeight;
+          var line = rootTop + height * 0.28;
           var current = -1;
           targets.forEach(function (t, i) {
             if (t && t.getBoundingClientRect().top <= line) current = i;
           });
+          var y = root === document.scrollingElement ? window.scrollY : root.scrollTop;
+          var maxScroll =
+            root === document.scrollingElement
+              ? document.documentElement.scrollHeight - window.innerHeight
+              : root.scrollHeight - root.clientHeight;
+          if (y > 40 && maxScroll - y < 8) current = targets.length - 1;
           links.forEach(function (a, i) {
             a.classList.toggle("is-active", i === current);
           });
         }
 
+        links.forEach(function (a) {
+          a.addEventListener("click", function (e) {
+            var root = scrollRoot();
+            if (root === document.scrollingElement) return;
+            var t = document.getElementById(a.getAttribute("href").slice(1));
+            if (!t) return;
+            e.preventDefault();
+            var top =
+              t.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop - 28;
+            root.scrollTo({ top: top, behavior: "smooth" });
+            history.pushState(null, "", a.getAttribute("href"));
+          });
+        });
+
         /* --- Кнопка «наверх» --- */
         var toTop = document.getElementById("to-top");
         function updateTop() {
-          toTop.classList.toggle("is-visible", window.scrollY > 700);
+          var root = scrollRoot();
+          var y = root === document.scrollingElement ? window.scrollY : root.scrollTop;
+          toTop.classList.toggle("is-visible", y > 700);
         }
         toTop.addEventListener("click", function () {
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          var root = scrollRoot();
+          if (root === document.scrollingElement) window.scrollTo({ top: 0, behavior: "smooth" });
+          else root.scrollTo({ top: 0, behavior: "smooth" });
         });
 
         function onScroll() {
@@ -648,6 +620,15 @@ Soft — концепция мобильного приложения для р�
         }
         window.addEventListener("scroll", onScroll, { passive: true });
         window.addEventListener("resize", onScroll);
+        if (scroller) scroller.addEventListener("scroll", onScroll, { passive: true });
+        if (location.hash) {
+          var start = document.getElementById(location.hash.slice(1));
+          var root = scrollRoot();
+          if (start && root !== document.scrollingElement) {
+            root.scrollTop =
+              start.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop - 28;
+          }
+        }
         onScroll();
       })();
     </script>

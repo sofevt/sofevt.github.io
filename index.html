@@ -3,57 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>София Евтух — UX/UI-дизайнер. Портфолио</title>
+    <title>София Евтух — UX/UI &amp; product дизайнер. Портфолио</title>
     <meta
       name="description"
-      content="Портфолио Софии Евтух, продуктового UX/UI-дизайнера: мобильные приложения, сложные сервисы, исследования."
+      content="Портфолио Софии Евтух, UX/UI и продуктового дизайнера: мобильные приложения, сложные сервисы, исследования."
     />
- 
+
     <!-- Превью ссылки в Telegram, соцсетях и мессенджерах -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="og:title" content="София Евтух — UX/UI-дизайнер." />
+    <meta property="og:title" content="София Евтух — UX/UI &amp; product дизайнер. Портфолио" />
     <meta
       property="og:description"
-      content="Портфолио: мобильные приложения, сложные сервисы, исследования."
+      content="UX/UI и продуктовый дизайнер: мобильные приложения, сложные сервисы, исследования."
     />
     <meta property="og:url" content="https://sofevt.github.io/" />
-    <meta property="og:site_name" content="Портфолио Софии Евтух" />
     <meta
       property="og:image"
-      content="https://sofevt.github.io/images/og-image.jpg"
+      content="https://sofevt.github.io/images/og-image.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
- 
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Covered+By+Your+Grace&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
-  <body>
+  <body class="home">
     <div class="page-shell">
-      <header class="site-header">
-        <nav class="nav nav-left" aria-label="Основная навигация">
-          <a href="#projects">проекты</a>
-          <a href="cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
-        </nav>
- 
-        <nav class="nav nav-right" aria-label="Контакты">
-          <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
-          <a href="mailto:sofaevt@gmail.com">gmail</a>
-        </nav>
-      </header>
- 
-      <main>
-        <section class="hero" id="about" aria-label="Главный раздел">
+      <main class="split">
+        <!-- Левая половина: липкое интро -->
+        <section class="intro" id="about" aria-label="Главный раздел">
+          <header class="site-header">
+            <nav class="nav nav-left" aria-label="Основная навигация">
+              <a href="cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+            </nav>
+
+            <nav class="nav nav-right" aria-label="Контакты">
+              <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+              <a href="mailto:sofaevt@gmail.com">gmail</a>
+            </nav>
+          </header>
+
           <h1 class="hero-copy">
-            Привет, я София. Продуктовый UX/UI-дизайнер
+            привет, я София
+            <span class="hero-copy-line2">UX/UI &amp; product дизайнер</span>
           </h1>
- 
+
           <img
             class="hero-doodle"
             src="images/main-image.webp"
@@ -62,28 +66,31 @@
             alt=""
             aria-hidden="true"
           />
- 
-          <p class="hero-text">
-            — проектирую простое и естественное взаимодействие
-            даже в сложных продуктах
-          </p>
- 
-        
+
+          <div class="intro-bottom">
+            <p class="hero-text">
+              — проектирую простое и естественное взаимодействие
+              даже в сложных продуктах
+            </p>
+          </div>
         </section>
 
+        <!-- Правая половина: проекты, прокручиваются -->
         <section class="projects-section" id="projects" aria-label="Проекты">
+          <h2 class="panel-title">PORTFOLIO</h2>
+
           <div class="projects-container">
             <div class="project-grid">
-              <a class="project-card" href="cases/jarvi-resort/" aria-label="Проект Jarvi Resort">
+              <a class="project-card" id="jarvi" href="cases/jarvi-resort/" aria-label="Проект Jarvi Resort">
                 <div class="project-visual">
-                  <img src="jarviresort-cover.jpg" alt="Обложка проекта Jarvi Resort" loading="lazy" />
+                  <img src="images/covers/jarviresort-cover.png" alt="Обложка проекта Jarvi Resort" loading="lazy" />
                 </div>
                 <div class="project-text">
                   <div class="project-header">
-    <h2>Jarvi Resort</h2>
-    <span class="project-arrow" aria-hidden="true"></span>
-  </div>
-                  <p>Проектирование цифрового сервиса для гостей курорта</p>
+                    <h2>Jarvi Resort</h2>
+                    <span class="project-arrow" aria-hidden="true"></span>
+                  </div>
+                  <p>— проектирование цифрового сервиса для гостей курорта</p>
                   <ul class="tags" aria-label="Теги проекта Jarvi Resort">
                     <li>Рабочий кейс</li>
                     <li>Hospitality</li>
@@ -93,16 +100,35 @@
                 </div>
               </a>
 
-              <a class="project-card" href="cases/soft/" aria-label="Проект Soft">
+              <a class="project-card" id="yandex" href="cases/yandex/" aria-label="Проект Яндекс Карты + Погода">
                 <div class="project-visual">
-                  <img src="soft-cover.jpg" alt="Обложка проекта Soft" loading="lazy" />
+                  <img src="images/covers/yandex-cover.png" alt="Обложка проекта Яндекс Карты + Погода" loading="lazy" />
                 </div>
                 <div class="project-text">
                   <div class="project-header">
-    <h2>Soft</h2>
-    <span class="project-arrow" aria-hidden="true"></span>
-  </div>
-                  <p>Исследование и проектирование сервиса для развития soft skills</p>
+                    <h2>Yandex Weather & Maps</h2>
+                    <span class="project-arrow" aria-hidden="true"></span>
+                  </div>
+                  <p>— исследование и проектирование продуктовой гипотезы</p>
+                  <ul class="tags" aria-label="Теги проекта Яндекс Карты + Погода">
+                    <li>Учебный проект</li>
+                    <li>Research</li>
+                    <li>Feature design</li>
+                    <li>Mobile</li>
+                  </ul>
+                </div>
+              </a>
+
+              <a class="project-card" id="soft" href="cases/soft/" aria-label="Проект Soft">
+                <div class="project-visual">
+                  <img src="images/covers/soft-cover.png" alt="Обложка проекта Soft" loading="lazy" />
+                </div>
+                <div class="project-text">
+                  <div class="project-header">
+                    <h2>Soft</h2>
+                    <span class="project-arrow" aria-hidden="true"></span>
+                  </div>
+                  <p>— исследование и проектирование сервиса для развития soft skills</p>
                   <ul class="tags" aria-label="Теги проекта Soft">
                     <li>Пет-проект</li>
                     <li>EdTech</li>
@@ -112,39 +138,20 @@
                 </div>
               </a>
 
-              <a class="project-card" href="cases/nodus/" aria-label="Проект Nodus VPN">
+              <a class="project-card" id="nodus" href="cases/nodus/" aria-label="Проект Nodus VPN">
                 <div class="project-visual">
-                  <img src="nodusvpn-cover.jpg" alt="Обложка проекта Nodus VPN" loading="lazy" />
+                  <img src="images/covers/nodusvpn-cover.png" alt="Обложка проекта Nodus VPN" loading="lazy" />
                 </div>
                 <div class="project-text">
-                 <div class="project-header">
-    <h2>Nodus VPN</h2>
-    <span class="project-arrow" aria-hidden="true"></span>
-  </div>
-                  <p>Проектирование интерфейсов децентрализованного VPN-сервиса</p>
+                  <div class="project-header">
+                    <h2>Nodus VPN</h2>
+                    <span class="project-arrow" aria-hidden="true"></span>
+                  </div>
+                  <p>— проектирование интерфейсов децентрализованного VPN-сервиса</p>
                   <ul class="tags" aria-label="Теги проекта Nodus VPN">
                     <li>Рабочий кейс</li>
                     <li>VPN</li>
                     <li>UX/UI</li>
-                    <li>Mobile</li>
-                  </ul>
-                </div>
-              </a>
-
-              <a class="project-card" href="cases/yandex/" aria-label="Проект Яндекс Карты + Погода">
-                <div class="project-visual">
-                  <img src="yandex-cover.jpg" alt="Обложка проекта Яндекс Карты + Погода" loading="lazy" />
-                </div>
-                <div class="project-text">
-                  <div class="project-header">
-    <h2>Яндекс Карты + Погода</h2>
-    <span class="project-arrow" aria-hidden="true"></span>
-  </div>
-                  <p>Исследование и проектирование продуктовой гипотезы</p>
-                  <ul class="tags" aria-label="Теги проекта Яндекс Карты + Погода">
-                    <li>Учебный проект</li>
-                    <li>Research</li>
-                    <li>Feature design</li>
                     <li>Mobile</li>
                   </ul>
                 </div>
@@ -154,28 +161,14 @@
         </section>
       </main>
 
-      <footer class="site-footer" aria-label="Контакты и футер">
-        <div class="footer-content">
-          <img
-            class="footer-doodle"
-            src="images/envelope.svg"
-            alt=""
-            aria-hidden="true"
-          />
-          <h2>буду рада познакомиться!</h2>
-
-          <div class="footer-row">
-            <div class="footer-links footer-left">
-              <a href="#projects">проекты</a>
-              <a href="cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
-            </div>
-
-            <div class="footer-links footer-right">
-              <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
-              <a href="mailto:sofaevt@gmail.com">gmail</a>
-            </div>
-          </div>
-        </div>
+      <footer class="site-footer">
+        <nav class="contact-row" aria-label="Контакты">
+          <a href="cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+          <span>
+            <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+            <a href="mailto:sofaevt@gmail.com">gmail</a>
+          </span>
+        </nav>
       </footer>
     </div>
 
