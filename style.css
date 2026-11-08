@@ -6,7 +6,7 @@
     --bg: #ffffff;
     --text: #1b1b19;
     --dark: #161616;
-    --lavender: #c0a8e4;
+    --lavender: #BAD4FF;
     --white: #ffffff;
     --on-dark-muted: rgba(255, 255, 255, 0.55);
     --on-dark-border: rgba(255, 255, 255, 0.28);
@@ -504,9 +504,9 @@
     border-color: var(--tag-fill);
   }
 
-  /* заголовок правой панели: «PORTFOLIO», на десктопе липнет к верху */
+  /* заголовок правой панели: «PORTFOLIO» */
   .home .panel-title {
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 5;
     margin: 0 0 20px;

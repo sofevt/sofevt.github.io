@@ -9,7 +9,7 @@
   --line-strong: rgba(27, 27, 25, 0.14); /* обводки блоков — в цвет разделителей */
   --lavender-soft: #e7dcf7;
   --marker: #d8c8f1; /* цвет маркера в содержании и бледного тега */
-  --lavender-text: #a98bd6; /* сиреневый для подписей-капшенов */
+  --lavender-text: #BAD4FF; /* сиреневый для подписей-капшенов */
 
   --rail: 200px; /* ширина колонки с содержанием */
   --rail-gap: 64px;
@@ -1471,8 +1471,8 @@ body.case-page {
 
 .case-meta {
   margin: 20px 0 0;
-  color: #c0a8e4;
-  font-size: 1.125rem;
+  color: var(--lavender);
+  font-size: 1rem;
   line-height: 1.45;
 }
 
