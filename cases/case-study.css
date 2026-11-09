@@ -1541,13 +1541,10 @@ body.case-page {
 }
 
 .case-scroll {
-  direction: rtl;
   height: 100%;
   min-height: 0;
   overflow-y: auto;
-  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.22);
-  scrollbar-width: thin;
-  scrollbar-color: #ffffff #161616;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.22)
 }
 
 .case-scroll::-webkit-scrollbar {
@@ -1607,6 +1604,7 @@ body.case-page {
 .case-page .video-frame {
   max-width: none;
   margin: 0;
+  background-color: rgb(31, 31, 32);
 }
 
 .case-page .video-caption {
