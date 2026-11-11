@@ -1,5 +1,5 @@
 /* ========================================================================
-   Shared design tokens
+   Design tokens
    ======================================================================== */
 :root {
   --bg: #ffffff;
@@ -8,19 +8,15 @@
   --lavender: #c0a8e4;
   --white: #ffffff;
 
-  /* Text and tags on dark backgrounds */
   --on-dark-muted: rgba(255, 255, 255, 0.8);
   --tag-fill: rgba(255, 255, 255, 0.1);
   --tag-text: rgba(255, 255, 255, 0.9);
 
-  /* Horizontal spacing */
   --pad-x: clamp(20px, 9.375vw, 120px);
   --grid-pad: clamp(16px, calc(var(--pad-x) - 80px), 40px);
-
-  /* Layout and typography */
-  --gap: clamp(32px, 6.25vw, 80px);
-  --fs-display: clamp(1.75rem, 3.125vw, 3rem);
-  --cover-ratio: 16 / 9;
+  --layout-gap: clamp(32px, 6.25vw, 80px);
+  --font-size-display: clamp(1.75rem, 3.125vw, 3rem);
+  --project-cover-ratio: 16 / 9;
 }
 
 /* ========================================================================
@@ -58,33 +54,26 @@ img {
 }
 
 /* ========================================================================
-   Shared containers and navigation
+   Shared header, containers, and navigation
    ======================================================================== */
-.site-header,
-.hero {
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-right: var(--pad-x);
-  padding-left: var(--pad-x);
+  padding: 60px var(--pad-x) 0;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .projects-container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-right: var(--grid-pad);
-  padding-left: var(--grid-pad);
-}
-
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding-top: 60px;
-  font-size: 1.125rem;
-  font-weight: 500;
+  padding-inline: var(--grid-pad);
 }
 
 .nav {
@@ -116,59 +105,69 @@ img {
 }
 
 /* ========================================================================
-   Legacy/general hero styles
+   Homepage introduction
    ======================================================================== */
-.hero {
-  padding-top: 80px;
-  padding-bottom: 100px;
+.home .intro {
+  display: flex;
+  flex-direction: column;
+  padding: 24px var(--pad-x) 28px;
 }
 
-.hero-copy,
-.hero-text {
+.home .intro .site-header {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home .hero-copy,
+.home .hero-text {
   margin: 0;
   color: var(--text);
-  font-size: var(--fs-display);
   font-weight: 400;
-  line-height: 1.2;
   letter-spacing: -0.03em;
 }
 
-.hero-copy {
+.home .hero-copy {
+  margin-top: 36px;
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  line-height: 1.2;
   text-wrap: balance;
 }
 
-.hero-text {
-  max-width: 24em;
+.home .hero-copy-line2 {
+  display: block;
 }
 
-.hero-doodle {
-  width: clamp(160px, 15vw, 220px);
+.home .hero-doodle {
+  width: clamp(180px, 18vw, 260px);
   height: auto;
-  margin: 44px 0 48px;
+  margin: 36px 0 0;
 }
 
-.hero-note {
-  max-width: 34em;
-  margin: 28px 0 0;
-  color: rgba(27, 27, 25, 0.65);
-  font-size: 1.125rem;
-  line-height: 1.45;
+.home .intro-bottom {
+  margin-top: 48px;
+}
+
+.home .hero-text {
+  max-width: 17em;
+  font-size: clamp(1.125rem, 2.4vw, 1.25rem);
+  line-height: 1.2;
 }
 
 /* ========================================================================
-   Portfolio project list
+   Project cards
    ======================================================================== */
 .projects-section {
-  padding: 60px 0;
+  padding: 0 0 64px;
   background: var(--dark);
   color: var(--white);
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: var(--gap);
-  row-gap: var(--gap);
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 56px;
 }
 
 .project-card {
@@ -192,7 +191,7 @@ img {
 
 .project-visual {
   width: 100%;
-  aspect-ratio: var(--cover-ratio);
+  aspect-ratio: var(--project-cover-ratio);
   overflow: hidden;
   border-radius: 24px;
   background: #30302f;
@@ -212,7 +211,7 @@ img {
 }
 
 .project-text h2 {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -225,10 +224,6 @@ img {
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 8px;
-}
-
-.project-header h2 {
-  margin: 0;
 }
 
 .project-arrow {
@@ -247,10 +242,9 @@ img {
 }
 
 .project-text p {
-  min-height: 0;
   margin: 0;
   color: var(--on-dark-muted);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.45;
   letter-spacing: -0.01em;
 }
@@ -279,8 +273,28 @@ img {
 }
 
 .tags li:first-child {
-  border-color: var(--tag-fill);
   background: var(--tag-fill);
+}
+
+.home .project-text h2,
+.home .panel-title {
+  font-family: "Covered By Your Grace", "Caveat", cursive;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.home .project-text h2 {
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.home .panel-title {
+  margin: 0 0 20px;
+  padding: 24px var(--grid-pad) 0;
+  background: var(--dark);
+  color: var(--white);
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  line-height: 1.1;
 }
 
 /* ========================================================================
@@ -319,84 +333,6 @@ img {
 }
 
 /* ========================================================================
-   Homepage composition
-   ======================================================================== */
-.home .intro {
-  display: flex;
-  flex-direction: column;
-  padding: 24px var(--pad-x) 28px;
-}
-
-.home .intro .site-header {
-  width: auto;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
-.home .hero-copy {
-  margin-top: 36px;
-  font-size: clamp(1.5rem, 4vw, 1.75rem);
-}
-
-.home .hero-copy-line2 {
-  display: block;
-}
-
-.home .hero-doodle {
-  width: clamp(180px, 18vw, 260px);
-  margin: 36px 0 0;
-}
-
-.home .intro-bottom {
-  margin-top: 48px;
-}
-
-.home .hero-text {
-  max-width: 17em;
-  font-size: clamp(1.125rem, 2.4vw, 1.25rem);
-}
-
-.home .project-grid {
-  grid-template-columns: minmax(0, 1fr);
-  row-gap: 56px;
-}
-
-.home .project-visual {
-  aspect-ratio: var(--cover-ratio);
-}
-
-.home .project-text h2,
-.home .panel-title {
-  font-family: "Covered By Your Grace", "Caveat", cursive;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.home .project-text h2 {
-  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
-  line-height: 1.1;
-}
-
-.home .project-text p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.125rem;
-}
-
-.home .projects-section {
-  padding: 0 0 64px;
-}
-
-.home .panel-title {
-  margin: 0 0 20px;
-  padding: 24px var(--grid-pad) 0;
-  background: var(--dark);
-  color: var(--white);
-  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
-  line-height: 1.1;
-}
-
-/* ========================================================================
    Responsive layouts
    ======================================================================== */
 @media (max-width: 1024px) {
@@ -411,47 +347,16 @@ img {
     padding-top: 24px;
   }
 
-  .project-arrow {
-    width: 28px;
-  }
-
-  .hero {
-    padding-top: 56px;
-    padding-bottom: 64px;
-  }
-
-  .hero-doodle {
-    margin: 32px 0;
-  }
-
-  .hero-note {
-    margin-top: 20px;
-    font-size: 1rem;
-  }
-
-  .projects-section {
-    padding: 40px 0 64px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-    row-gap: 56px;
-  }
-
   .project-card {
     gap: 18px;
   }
 
+  .project-arrow {
+    width: 28px;
+  }
+
   .project-visual {
     border-radius: 20px;
-  }
-
-  .project-text h2 {
-    font-size: 1.375rem;
-  }
-
-  .project-text p {
-    font-size: 1.0625rem;
   }
 
   .site-footer {
@@ -533,7 +438,7 @@ img {
     display: none;
   }
 
-  /* Decorative scrollbar; default scrollbar remains when unsupported. */
+  /* Custom scrollbar is decorative; native scrollbar remains the fallback. */
   html:has(body.home) {
     scrollbar-width: auto;
     scrollbar-color: #ffffff #3a3a3a;
