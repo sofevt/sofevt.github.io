@@ -16,6 +16,18 @@
   /* Верхний отступ шапки: общий для главной и страниц кейсов */
   --header-top: 60px;
 
+  /* Список проектов: расстояние между карточками и под заголовком PORTFOLIO.
+     Внешние отступы панели не меньше этого значения. */
+  --stack-gap: 40px;
+
+  /* Заголовок правой панели: PORTFOLIO на главной и PORTFOLIO / Название кейса
+     на странице кейса. Размер и верхний отступ общие, чтобы заголовок не прыгал
+     при переходе. На десктопе отступ рассчитан так, чтобы центр строки совпадал
+     с центром ссылок шапки слева: верх шапки + половина высоты её строки (10,8px)
+     - половина высоты строки заголовка (0,55 от размера шрифта при line-height 1,1). */
+  --panel-title-size: clamp(1.875rem, 2.9vw, 2.75rem);
+  --panel-title-top: calc(var(--header-top) + 10.8px - 0.55 * var(--panel-title-size));
+
   /* Горизонтальные отступы */
   --pad-x: clamp(20px, 9.375vw, 120px);
   --grid-pad: clamp(16px, calc(var(--pad-x) - 80px), 40px);
@@ -325,6 +337,7 @@ img {
 @media (max-width: 1024px) {
   :root {
     --header-top: 24px;
+    --panel-title-top: 48px;
     --pad-x: 32px;
     --grid-pad: 32px;
   }
@@ -349,7 +362,6 @@ img {
 
   .project-grid {
     grid-template-columns: 1fr;
-    row-gap: 56px;
   }
 
   .project-card {
@@ -423,7 +435,7 @@ img {
 .home .intro {
   display: flex;
   flex-direction: column;
-  padding: var(--header-top) var(--pad-x) 28px;
+  padding: var(--header-top) var(--pad-x) 56px;
 }
 
 .home .intro .site-header {
@@ -452,14 +464,14 @@ img {
 }
 
 .home .hero-text {
-  max-width: 17em;
-  font-size: clamp(1.125rem, 2.4vw, 1.25rem);
+  max-width: 24em;
+  font-size: clamp(1.375rem, 3vw, 1.625rem);
 }
 
 /* проекты: одна колонка, заголовки рукописным шрифтом */
 .home .project-grid {
   grid-template-columns: minmax(0, 1fr);
-  row-gap: 56px;
+  row-gap: var(--stack-gap);
 }
 
 .home .project-text h2 {
@@ -480,11 +492,11 @@ img {
 
 /* заголовок правой панели: «PORTFOLIO» */
 .home .panel-title {
-  margin: 0 0 20px;
-  padding: 24px var(--grid-pad) 0;
+  margin: 0 0 var(--stack-gap);
+  padding: var(--panel-title-top) var(--grid-pad) 0;
   background: var(--dark);
   font-family: "Covered By Your Grace", "Caveat", cursive;
-  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  font-size: var(--panel-title-size);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.1;
@@ -519,6 +531,7 @@ img {
   }
 
   .home .hero-text {
+    max-width: 17em;
     font-size: clamp(1.25rem, 1.8vw, 1.875rem);
   }
 
@@ -532,8 +545,8 @@ img {
   }
 
   .home .panel-title {
-    margin: 0 calc(-1 * clamp(32px, 4.6vw, 88px)) 20px;
-    padding: 40px clamp(32px, 4.6vw, 88px) 0;
+    margin: 0 calc(-1 * clamp(32px, 4.6vw, 88px)) var(--stack-gap);
+    padding: var(--panel-title-top) clamp(32px, 4.6vw, 88px) 0;
   }
 
   .home .projects-container {

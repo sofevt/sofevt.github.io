@@ -278,14 +278,14 @@
     width: 100%;
     max-width: calc(var(--case-content-max) + 2 * clamp(32px, 4.6vw, 88px));
     margin-inline: auto;
-    padding: 40px clamp(32px, 4.6vw, 88px) 88px;
+    padding: var(--panel-title-top) clamp(32px, 4.6vw, 88px) 88px;
   }
 
   .case-crumb {
     margin: 0 0 24px;
     color: var(--case-text);
     font-family: "Covered By Your Grace", "Caveat", cursive;
-    font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+    font-size: var(--panel-title-size);
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: 0;
@@ -333,6 +333,12 @@
   .case-section--sub:last-child,
   .case-section:last-child {
     margin-bottom: 0;
+  }
+
+  /* Перед секцией, которая начинается с h2, всегда основной отступ, какой бы тип
+     у предыдущей секции ни был: отступы соседей не складываются, берётся больший. */
+  .case-content > .case-section:not(:first-child):has(> h2) {
+    margin-top: var(--case-space-10);
   }
 
   .case-content > * {
@@ -1238,7 +1244,6 @@
     }
 
     .case-scroll-inner {
-      padding-top: 28px;
       padding-bottom: 56px;
     }
   }
@@ -1366,6 +1371,10 @@
 
     .case-section {
       margin-bottom: 64px;
+    }
+
+    .case-content > .case-section:not(:first-child):has(> h2) {
+      margin-top: 64px;
     }
 
     .case-section--sub {
