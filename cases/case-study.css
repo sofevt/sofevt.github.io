@@ -12,14 +12,14 @@
     --case-bg: var(--dark);
     --case-surface-raised: #262626;
     --case-text: var(--white);
-    --case-text-muted: rgba(255, 255, 255, 0.78);
-    --case-text-subtle: rgba(255, 255, 255, 0.54);
+    --case-text-muted: rgba(255, 255, 255, 0.87);   /* было 0.78 */
+    --case-text-subtle: rgba(255, 255, 255, 0.62);  /* было 0.54 */
     --case-line: rgba(255, 255, 255, 0.16);
     --case-line-strong: rgba(255, 255, 255, 0.24);
     --case-accent: var(--lavender);
-    /* Полупрозрачные варианты --lavender (192, 168, 228): при смене акцента менять вместе. */
-    --case-accent-soft: rgba(192, 168, 228, 0.22);
-    --case-accent-wash: rgba(192, 168, 228, 0.12);
+    /* Полупрозрачные варианты --lavender (186, 200, 255): при смене акцента менять вместе. */
+    --case-accent-soft: rgba(186, 200, 255, 0.22);
+    --case-accent-wash: rgba(186, 200, 255, 0.12);
     --case-on-accent: var(--text);
     --case-overlay: rgba(12, 12, 12, 0.94);
 
