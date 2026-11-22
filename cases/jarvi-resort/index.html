@@ -20,13 +20,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Covered+By+Your+Grace&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="../case-study.css" />
-    <link rel="icon" type="image/svg" href="../../images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
   </head>
   <body class="case-page">
     <div class="case-split" id="top">
@@ -52,7 +48,7 @@
           <p class="case-lead">Проектирование цифрового сервиса для гостей курорта</p>
           <p class="case-meta">Роль: UX-дизайнер</p>
           <p class="case-meta">Год: 2024–2025</p>
-          <ul class="case-tags" aria-label="Теги проекта">
+          <ul class="tags" aria-label="Теги проекта">
             <li>Рабочий кейс</li>
             <li>Hospitality</li>
             <li>Mobile</li>
@@ -75,7 +71,7 @@
       <div class="case-scroll">
         <div class="case-scroll-inner">
           <p class="case-crumb">
-            <a href="../../#projects">PORTFOLIO</a>
+            <a href="../../#projects">portfolio</a>
             <span aria-hidden="true">/</span>
             Jarvi Resort
           </p>
@@ -98,7 +94,7 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <p class="video-caption">Можно почитать кейс, а можно посмотреть и послушать Loom</p>
+            <p class="video-caption">Можно почитать кейс или послушать loom</p>
           </section>
 
           <div class="case-content">
@@ -106,18 +102,19 @@
             <section class="case-section" id="context">
               <h2>Контекст</h2>
               <p class="lead">
-                Jarvi Resort — новый SPA-курорт, открытие которого запланировано на 2027 год.
+                Jarvi Resort — новый SPA-курорт, открытие которого запланировано на 2027 год
               </p>
               <p>
-                Без единой системы множество взаимосвязанных сервисов проходят через ресепшен,
-                звонки и разрозненные каналы: сотрудники тратят время на типовые запросы, гости —
-                на поиск информации.
+                Проектировалось мобильное приложение, призванное объединить основные сервисы в цифровую экосистему. 
+                От доступа к номеру и записи на процедуры до заказа услуг и общения с персоналом — 
+                приложение охватывало ключевые взаимодействия гостя с курортом.
+
+
               </p>
               <aside class="callout">
                 <span class="callout-icon" aria-hidden="true">📌</span>
                 <p>
-                  <strong>Задача продукта:</strong> собрать ключевые точки взаимодействия гостя с
-                  отелем в одном приложении и сделать пребывание более удобным и самостоятельным.
+                  <strong>Цель::</strong> сделать управление отдыхом удобнее и самостоятельнее, перенести часть повседневных запросов в цифровой канал.
                 </p>
               </aside>
             </section>
@@ -141,21 +138,16 @@
 
               <div class="challenge">
                 <span class="challenge-label">Главный вызов</span>
-                <p>
+                <p class="lead">
                   Организовать большое количество функций в понятную структуру —
                   <mark>без перегрузки интерфейса</mark>.
                 </p>
               </div>
 
               <aside class="callout callout--stack">
-                <h3>Работа с требованиями</h3>
                 <p>
-                  Перед проектированием я изучила бизнес-требования совместно с аналитиком:
-                  разбирала ТЗ, выявляла противоречия и спорные сценарии, уточняла логику.
-                </p>
-                <p>
-                  Это позволило согласовать структуру продукта заранее и снизить количество правок
-                  уже на этапе вайрфреймов.
+                  Сначала я изучила бизнес-требования совместно с аналитиком: это помогло разобраться во 
+                  взаимосвязях функций и сразу учесть их при проектировании структуры и пользовательских сценариев.
                 </p>
               </aside>
             </section>
@@ -164,12 +156,10 @@
             <section class="case-section" id="structure">
               <h2>Как формировалась структура приложения</h2>
               <p>
-                Перед проектированием экранов я сгруппировала функции по пользовательским задачам —
-                чтобы собрать разрозненные сервисы в единую систему и избежать перегруженной
-                навигации.
+                Сначала я сгруппировала функции по основным задачам гостя, а затем на основе этих групп сформировала разделы приложения.
               </p>
 
-              <h3><span class="step-label">Шаг 1</span> Группировка по сценариям</h3>
+              <p class="lead"><span class="step-label">Шаг 1</span> Группировка по сценариям</p>
               <p>Я объединила функции вокруг основных задач гостя:</p>
               <div class="group-grid">
                 <div class="group-card">
@@ -199,7 +189,7 @@
                 </div>
               </div>
 
-              <h3><span class="step-label">Шаг 2</span> Финальная структура</h3>
+              <p class="lead"><span class="step-label">Шаг 2</span> Финальная структура</p>
               <figure class="case-figure case-figure--diagram">
                 <img
                   src="images/02-structure-ia.webp"
@@ -211,18 +201,17 @@
               </figure>
             </section>
 
-            <!-- Ключевые разделы -->
+            <!-- Ключевые решения -->
             <section class="case-section case-section--group" id="sections">
-              <h2>Навигация и ключевые разделы</h2>
+              <h2>Ключевые решения</h2>
             </section>
 
             <section class="case-section case-section--sub" id="home">
-              <h3>Главная</h3>
+              <h3>Главная как центр управления пребыванием</h3>
               <p>
-                Я спроектировала главный экран вокруг частых задач гостя и сценариев, которые
-                требуют быстрого доступа.
+                Пересмотрела структуру главного экрана, расставив приоритеты и собрав основную информацию о пребывании в одном месте.
               </p>
-              <figure class="case-figure">
+              <figure class="case-figure case-figure--two-thirds">
                 <img
                   src="images/03-home.webp"
                   width="595"
@@ -235,11 +224,9 @@
               <hr class="case-divider" />
 
               <p>
-                Отдельно проработала сценарий питания. В зависимости от условий бронирования
-                карточка либо предоставляет быстрый доступ к QR-коду для посещения ресторана, либо
-                предлагает оформить питание отдельно.
+                Отдельно проработала сценарий питания: предусмотрела разные варианты блока в зависимости от условий бронирования.
               </p>
-              <figure class="case-figure">
+              <figure class="case-figure case-figure--two-thirds">
                 <img
                   src="images/04-home-qr.webp"
                   width="526"
@@ -249,7 +236,7 @@
                 />
                 <figcaption>Питание включено: быстрый доступ к QR-коду</figcaption>
               </figure>
-              <figure class="case-figure">
+              <figure class="case-figure case-figure--two-thirds">
                 <img
                   src="images/05-home-offer.webp"
                   width="526"
@@ -262,9 +249,8 @@
             </section>
 
             <section class="case-section case-section--sub" id="services">
-              <h3>Услуги</h3>
-              <p>Единая точка входа для всех сервисных сценариев:</p>
-              <figure class="case-figure">
+              <h3>Услуги — единый раздел сервисов и досуга</h3>
+              <figure class="case-figure case-figure--full">
                 <img
                   src="images/06-services-1.webp"
                   width="799"
@@ -273,7 +259,7 @@
                   alt="Раздел «Услуги»: афиша, рум-сервис, запись на массаж, выбор мастера"
                 />
               </figure>
-              <figure class="case-figure">
+              <figure class="case-figure case-figure--full">
                 <img
                   src="images/07-services-2.webp"
                   width="702"
@@ -285,9 +271,9 @@
             </section>
 
             <section class="case-section case-section--sub" id="access">
-              <h3>Доступы</h3>
-              <p>В этом разделе я объединила все сценарии управления доступом.</p>
-              <figure class="case-figure case-figure--row">
+              <h3>Управление доступом</h3>
+              <p>В одном разделе объединила все сценарии управления доступом — в номер и на территорию курорта.</p>
+              <figure class="case-figure case-figure--third">
                 <img
                   src="images/08-access.webp"
                   width="253"
@@ -308,14 +294,12 @@
             <section class="case-section case-section--sub" id="registration">
               <h3>Предварительная регистрация гостей</h3>
               <p>
-                Заселение семьи или корпоративной группы — юридически обязательный процесс:
-                документы каждого гостя должны быть проверены администратором.
-              </p>
+                Для семейных и корпоративных бронирований предусмотрена возможность заранее заполнить данные всех 
+                проживающих и добавить транспортные средства в рамках одной брони.</p>
               <p>
-                Гость может заранее заполнить данные всех проживающих в номере и добавить
-                транспортные средства в рамках одной брони.
+                После отправки данные каждого гостя проверяет администратор.
               </p>
-              <figure class="case-figure">
+              <figure class="case-figure case-figure--full">
                 <img
                   src="images/10-registration.webp"
                   width="731"
@@ -340,7 +324,7 @@
                 Статус отображается отдельно по каждому участнику. В случае ошибки администратор
                 отправляет пояснительный комментарий в чат с гостем.
               </p>
-              <figure class="case-figure">
+              <figure class="case-figure case-figure--two-thirds">
                 <img
                   src="images/12-registration-form.webp"
                   width="555"
@@ -354,9 +338,9 @@
             <section class="case-section case-section--sub" id="chat-profile">
               <h3>Чат и профиль</h3>
               <p>
-                Чат — единый канал связи с отелем и точка обратной связи для регистрации и
-                сервисных вопросов. Профиль — личный кабинет: данные гостя, бронирования,
-                лояльность.
+                Чат стал единым каналом связи с персоналом — 
+                для сервисных вопросов и обратной связи. 
+                В профиле собраны личные данные гостя, информация о бронированиях и программа лояльности.
               </p>
               <figure class="case-figure case-figure--row">
                 <img
@@ -375,66 +359,52 @@
                 />
               </figure>
             </section>
-          </div>
 
-        <!-- ============ Результат (тёмный блок) ============ -->
-        <section class="case-result" id="result">
-          <div class="case-wrap band-grid">
-            <h2>Результат</h2>
-            <div class="band-body">
+            <!-- ============ Результат ============ -->
+            <section class="case-section case-result" id="result">
+              <h2>Результат</h2>
               <p>
-                Я спроектировала информационную архитектуру и детализированные wireframes
-                мобильного приложения — подготовила <strong>12 сценариев</strong> в Figma с состояниями, edge-кейсами
-                и флоу, которые стали основой для дальнейшего UI-дизайна и разработки.
+                Я спроектировала информационную архитектуру и детализированные вайрфреймы мобильного приложения — 
+                подготовила 12 сценариев, включая состояния интерфейса, edge-кейсы и флоу, 
+                которые стали основой для дальнейшего UI-дизайна и разработки.
               </p>
 
-      
               <h3>Ключевые решения</h3>
               <ol class="decisions">
                 <li>
-                 
                   <p>
                     Главный экран — персональный дашборд с приоритетом по частоте использования и
                     актуальности
                   </p>
                 </li>
                 <li>
-                  
                   <p>
                     Вынесла доступы и сервисы в отдельные разделы навигации: частые срочные
                     действия отделены от сценариев с выбором и бронированием
                   </p>
                 </li>
                 <li>
-                  
                   <p>
-                    Сложный сценарий групповой регистрации проработала через пошаговый флоу с
-                    визуальными статусами проверки по каждому гостю
+                    Проработала групповую регистрацию с индивидуальной проверкой данных каждого гостя
                   </p>
                 </li>
               </ol>
-            </div>
-          </div>
-        </section>
+            </section>
 
-        <!-- ============ Заключение ============ -->
-        <section class="case-conclusion" id="conclusion">
-          <div class="case-wrap band-grid">
-            <h2>Заключение</h2>
-            <div class="band-body">
+            <!-- ============ Заключение ============ -->
+            <section class="case-section" id="conclusion">
+              <h2>Заключение</h2>
               <p>
-                Главный вывод из проекта: в сложных сервисных продуктах качество UX определяется
-                архитектурой и приоритизацией сценариев, а не отдельными экранами.
+               На этапе проектирования приоритеты сценариев определялись на основе требований и анализа их логики. 
+               После запуска я бы проверила навигацию на гостях разного возраста, уточнила частоту использования 
+               ключевых сценариев и протестировала несколько вариантов главного экрана после MVP.
               </p>
               <p>
-                Дальше я бы проверила навигацию на гостях разного возраста, уточнила частоту
-                использования ключевых сценариев и протестировала несколько вариантов главного
-                экрана после MVP.
+                Результаты такой проверки помогли бы уточнить приоритеты главного экрана и доработать отдельные сценарии.
               </p>
               <a class="case-back" href="../../#projects">Вернуться в портфолио</a>
-            </div>
+            </section>
           </div>
-        </section>
         </div>
       </div>
     </div>
@@ -468,108 +438,6 @@
       <img alt="" />
     </dialog>
 
-    <script>
-      (function () {
-        /* --- Просмотр картинок --- */
-        var dlg = document.getElementById("lightbox");
-        if (dlg && typeof dlg.showModal === "function") {
-          var big = dlg.querySelector("img");
-          document.querySelectorAll(".case-figure img").forEach(function (img) {
-            img.addEventListener("click", function () {
-              big.src = img.currentSrc || img.src;
-              big.alt = img.alt;
-              big.classList.remove("is-zoomed");
-              dlg.showModal();
-            });
-          });
-          big.addEventListener("click", function () {
-            big.classList.toggle("is-zoomed");
-          });
-          dlg.addEventListener("click", function (e) {
-            if (e.target === dlg || e.target.classList.contains("lightbox-close")) dlg.close();
-          });
-        }
-
-        /* --- Содержание: подсветка текущего раздела --- */
-        var links = Array.prototype.slice.call(
-          document.querySelectorAll('.case-toc > ol > li > a[href^="#"]')
-        );
-        var targets = links.map(function (a) {
-          return document.getElementById(a.getAttribute("href").slice(1));
-        });
-        var scroller = document.querySelector(".case-scroll");
-
-        function scrollRoot() {
-          if (!scroller) return document.scrollingElement;
-          var style = getComputedStyle(scroller);
-          if (style.overflowY === "auto" || style.overflowY === "scroll") return scroller;
-          return document.scrollingElement;
-        }
-
-        function updateToc() {
-          var root = scrollRoot();
-          var rootTop = root === document.scrollingElement ? 0 : root.getBoundingClientRect().top;
-          var height = root === document.scrollingElement ? window.innerHeight : root.clientHeight;
-          var line = rootTop + height * 0.28;
-          var current = -1;
-          targets.forEach(function (t, i) {
-            if (t && t.getBoundingClientRect().top <= line) current = i;
-          });
-          var y = root === document.scrollingElement ? window.scrollY : root.scrollTop;
-          var maxScroll =
-            root === document.scrollingElement
-              ? document.documentElement.scrollHeight - window.innerHeight
-              : root.scrollHeight - root.clientHeight;
-          if (y > 40 && maxScroll - y < 8) current = targets.length - 1;
-          links.forEach(function (a, i) {
-            a.classList.toggle("is-active", i === current);
-          });
-        }
-
-        links.forEach(function (a) {
-          a.addEventListener("click", function (e) {
-            var root = scrollRoot();
-            if (root === document.scrollingElement) return;
-            var t = document.getElementById(a.getAttribute("href").slice(1));
-            if (!t) return;
-            e.preventDefault();
-            var top =
-              t.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop - 28;
-            root.scrollTo({ top: top, behavior: "smooth" });
-            history.pushState(null, "", a.getAttribute("href"));
-          });
-        });
-
-        /* --- Кнопка «наверх» --- */
-        var toTop = document.getElementById("to-top");
-        function updateTop() {
-          var root = scrollRoot();
-          var y = root === document.scrollingElement ? window.scrollY : root.scrollTop;
-          toTop.classList.toggle("is-visible", y > 700);
-        }
-        toTop.addEventListener("click", function () {
-          var root = scrollRoot();
-          if (root === document.scrollingElement) window.scrollTo({ top: 0, behavior: "smooth" });
-          else root.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-        function onScroll() {
-          updateToc();
-          updateTop();
-        }
-        window.addEventListener("scroll", onScroll, { passive: true });
-        window.addEventListener("resize", onScroll);
-        if (scroller) scroller.addEventListener("scroll", onScroll, { passive: true });
-        if (location.hash) {
-          var start = document.getElementById(location.hash.slice(1));
-          var root = scrollRoot();
-          if (start && root !== document.scrollingElement) {
-            root.scrollTop =
-              start.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop - 28;
-          }
-        }
-        onScroll();
-      })();
-    </script>
+    <script src="../case-study.js" defer></script>
   </body>
 </html>
