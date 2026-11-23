@@ -10,7 +10,7 @@
   /* Текст и теги на тёмном фоне */
   --on-dark-muted: rgba(255, 255, 255, 0.8);
   --tag-fill: rgba(255, 255, 255, 0.1);
-  --tag-border: rgba(255, 255, 255, 0.16);
+  --tag-border: rgba(255, 255, 255, 0.05);
   --tag-text: rgba(255, 255, 255, 0.9);
 
   /* Верхний отступ шапки: общий для главной и страниц кейсов */
@@ -344,6 +344,7 @@ img {
 }
 
 @media (max-width: 768px) {
+  
   .site-header {
     padding-top: 24px;
   }
@@ -376,14 +377,31 @@ img {
     font-size: 1.375rem;
   }
 
+  body.home .project-text h2 {
+    font-size: 1.375rem;
+  }
+
   .project-text p {
-    font-size: 1.0625rem;
+    font-size: 13px;
     min-height: 0;
+  }
+
+  body.home .project-text p {
+    font-size: 13px;
   }
 
   .site-footer {
     padding: 12px var(--pad-x) 40px;
   }
+  
+  .panel-title {
+    display: none;
+  }
+
+  body.home .projects-section {
+    padding-top: 40px;
+  }
+  
 }
 
 @media (max-width: 600px) {
@@ -446,7 +464,7 @@ img {
 }
 
 .home .hero-copy {
-  margin-top: 36px;
+  margin-top: 48px;
   font-size: clamp(1.5rem, 4vw, 1.75rem);
 }
 
@@ -460,7 +478,7 @@ img {
 }
 
 .home .intro-bottom {
-  margin-top: 48px;
+  margin-top: 68px;
 }
 
 .home .hero-text {
