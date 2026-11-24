@@ -10,7 +10,7 @@
   /* Текст и теги на тёмном фоне */
   --on-dark-muted: rgba(255, 255, 255, 0.8);
   --tag-fill: rgba(255, 255, 255, 0.1);
-  --tag-border: rgba(255, 255, 255, 0.05);
+  --tag-border: rgba(255, 255, 255, 0.09);
   --tag-text: rgba(255, 255, 255, 0.9);
 
   /* Верхний отступ шапки: общий для главной и страниц кейсов */
@@ -391,7 +391,7 @@ img {
   }
 
   .site-footer {
-    padding: 12px var(--pad-x) 40px;
+    padding: 20px var(--pad-x) 40px;
   }
   
   .panel-title {
