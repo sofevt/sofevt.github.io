@@ -200,7 +200,7 @@ img {
 .project-visual {
   width: 100%;
   aspect-ratio: var(--cover-ratio);
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   background: #30302f;
 }
@@ -297,7 +297,7 @@ img {
 }
 
 /* ==========================================================
-   Строка ссылок в футере: cv слева, telegram и gmail справа.
+   Строка ссылок в футере: cv слева, telegram и email справа.
    ========================================================== */
 .contact-row {
   display: flex;
