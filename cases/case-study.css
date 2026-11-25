@@ -1207,7 +1207,7 @@
   
   /* 09. RESPONSIVE
      ---------------------------------------------------------- */
-  @media (max-width: 1200px) and (min-width: 1025px) {
+  @media (max-width: 1200px) and (min-width: 1101px) {
     .case-split {
       grid-template-columns: minmax(280px, 1.7fr) minmax(0, 3fr);
     }
@@ -1225,7 +1225,7 @@
     }
   }
   
-  @media (min-width: 1025px) and (max-height: 700px) {
+  @media (min-width: 1101px) and (max-height: 700px) {
     .case-intro-body {
       margin-top: 24px;
     }
@@ -1247,7 +1247,7 @@
     }
   }
   
-  @media (max-width: 1024px) {
+  @media (max-width: 1100px) {
     body.case-page {
       height: auto;
       min-height: 100vh;
